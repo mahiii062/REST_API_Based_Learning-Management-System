@@ -1,0 +1,88 @@
+### ----------------------------
+
+
+### Show all courses
+GET http://localhost:3000/api/courses
+
+
+### ----------------------------
+
+
+### Show only one course with unique id
+GET http://localhost:3000/api/courses/ad4c7006-36ba-4018-b049-3f2d43c9a526
+
+
+### Register Learner
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "ABC",
+  "email": "abc@gmail.com",
+  "password": "abc123",
+  "role": "learner"
+}
+
+
+### ----------------------------
+
+
+### Login Learner
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "abc@gmail.com",
+  "password": "abc123"
+}
+
+
+### ----------------------------
+
+
+### Setup Bank for Learner
+POST http://localhost:3000/api/bank/setup
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBhMGU4MzBkLTMyNzYtNGVlNi1iZWVjLTA3MmE5Y2QyMDBmNyIsInJvbGUiOiJsZWFybmVyIiwiaWF0IjoxNzYzOTAxNjI3LCJleHAiOjE3NjM5MzA0Mjd9.UMqVJiWngvtqI-cxyEKlia5kGJugmm5aw0Qc64oj86U
+Content-Type: application/json
+
+{
+  "accountNumber": "ACC-62",
+  "secret": "pin123",
+  "initialBalance": 500
+}
+
+
+### ----------------------------
+
+
+### Learner buys a course
+POST http://localhost:3000/api/courses/29d93085-46b2-40c7-9683-25d6ce8510e1/buy
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBhMGU4MzBkLTMyNzYtNGVlNi1iZWVjLTA3MmE5Y2QyMDBmNyIsInJvbGUiOiJsZWFybmVyIiwiaWF0IjoxNzYzOTAxNjI3LCJleHAiOjE3NjM5MzA0Mjd9.UMqVJiWngvtqI-cxyEKlia5kGJugmm5aw0Qc64oj86U
+Content-Type: application/json
+
+{
+  "accountNumber": "ACC-62",
+  "secret": "pin123"
+}
+
+
+### ----------------------------
+
+
+### Learner views purchased courses
+GET http://localhost:3000/api/learners/me/courses
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBhMGU4MzBkLTMyNzYtNGVlNi1iZWVjLTA3MmE5Y2QyMDBmNyIsInJvbGUiOiJsZWFybmVyIiwiaWF0IjoxNzYzOTAxNjI3LCJleHAiOjE3NjM5MzA0Mjd9.UMqVJiWngvtqI-cxyEKlia5kGJugmm5aw0Qc64oj86U
+
+
+### ----------------------------
+
+
+### Learners certificate 
+POST http://localhost:3000/api/learners/me/courses/29d93085-46b2-40c7-9683-25d6ce8510e1/complete
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBhMGU4MzBkLTMyNzYtNGVlNi1iZWVjLTA3MmE5Y2QyMDBmNyIsInJvbGUiOiJsZWFybmVyIiwiaWF0IjoxNzYzOTAxNjI3LCJleHAiOjE3NjM5MzA0Mjd9.UMqVJiWngvtqI-cxyEKlia5kGJugmm5aw0Qc64oj86U
+
+
+### ----------------------------
+
+
+###

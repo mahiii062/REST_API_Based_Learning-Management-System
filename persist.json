@@ -1,0 +1,475 @@
+{
+  "users": [
+    {
+      "id": "6eb92ecd-acad-456e-84b6-f6610611dae3",
+      "name": "Inst ABC",
+      "email": "abc@ins.com",
+      "role": "instructor",
+      "passwordHash": null
+    },
+    {
+      "id": "84c2f35b-d7ee-4383-8a79-ee4d8cb43ba0",
+      "name": "Inst MNO",
+      "email": "mno@ins.com",
+      "role": "instructor",
+      "passwordHash": null
+    },
+    {
+      "id": "0702adc4-7969-4d66-87e7-4baed9910021",
+      "name": "Inst PQR",
+      "email": "pqr@ins.com",
+      "role": "instructor",
+      "passwordHash": null
+    },
+    {
+      "id": "c029a414-0e5f-45aa-9524-ade03242d091",
+      "name": "Demo Learner",
+      "email": "learner@example.com",
+      "role": "learner",
+      "passwordHash": null
+    },
+    {
+      "id": "8d33fb22-efc4-43bd-8632-47c12e254fd5",
+      "name": "Student X",
+      "email": "student@x.com",
+      "role": "learner",
+      "passwordHash": "$2a$08$EWYTb2ew./ZbXWMQ6IDBA.fqWLkp/Doj8N31ZxRQReYp/pv3rNztW"
+    },
+    {
+      "id": "6937c119-ea59-468a-b4fb-5ba469a3d823",
+      "name": "Mahi",
+      "email": "mahi@gmail.com",
+      "role": "learner",
+      "passwordHash": "$2a$08$j5g2cq4hp3jEbZYK9eQUFegL5m.PFhXr1FP3J8zlIPNCyBUJrG4DW"
+    },
+    {
+      "id": "0a0e830d-3276-4ee6-beec-072a9cd200f7",
+      "name": "ABC",
+      "email": "abc@gmail.com",
+      "role": "learner",
+      "passwordHash": "$2a$08$Sb4.hCn576sSYSPKmXjwh.eZ7nRiB3CTYOmyGJ0tSQJi11KPcgAoW"
+    }
+  ],
+  "instructors": [
+    {
+      "id": "6eb92ecd-acad-456e-84b6-f6610611dae3",
+      "name": "Inst ABC",
+      "payoutRate": 100
+    },
+    {
+      "id": "84c2f35b-d7ee-4383-8a79-ee4d8cb43ba0",
+      "name": "Inst MNO",
+      "payoutRate": 100
+    },
+    {
+      "id": "0702adc4-7969-4d66-87e7-4baed9910021",
+      "name": "Inst PQR",
+      "payoutRate": 100
+    }
+  ],
+  "courses": [
+    {
+      "id": "ad4c7006-36ba-4018-b049-3f2d43c9a526",
+      "title": "Intro to Programming",
+      "price": 200,
+      "instructorId": "6eb92ecd-acad-456e-84b6-f6610611dae3",
+      "materials": [
+        "video1.mp4",
+        "notes.pdf"
+      ],
+      "openTo": [
+        "6937c119-ea59-468a-b4fb-5ba469a3d823"
+      ],
+      "paidToInstructor": false
+    },
+    {
+      "id": "5d06daaa-8df7-4a53-b22e-3e4e27ec8f8b",
+      "title": "Web Development Basics",
+      "price": 150,
+      "instructorId": "84c2f35b-d7ee-4383-8a79-ee4d8cb43ba0",
+      "materials": [
+        "slides.pdf",
+        "demo.zip"
+      ],
+      "openTo": [],
+      "paidToInstructor": false
+    },
+    {
+      "id": "d3f4a130-ddca-4ca8-96e9-f9d504781783",
+      "title": "Data Structures",
+      "price": 250,
+      "instructorId": "0702adc4-7969-4d66-87e7-4baed9910021",
+      "materials": [
+        "videos.tar.gz",
+        "assignments.zip"
+      ],
+      "openTo": [],
+      "paidToInstructor": false
+    },
+    {
+      "id": "29d93085-46b2-40c7-9683-25d6ce8510e1",
+      "title": "Databases 101",
+      "price": 180,
+      "instructorId": "6eb92ecd-acad-456e-84b6-f6610611dae3",
+      "materials": [
+        "sql_notes.pdf"
+      ],
+      "openTo": [
+        "0a0e830d-3276-4ee6-beec-072a9cd200f7"
+      ],
+      "paidToInstructor": false
+    },
+    {
+      "id": "fdf532ca-1c9b-4896-9a2c-26b400e8bbf7",
+      "title": "APIs & REST_api",
+      "price": 220,
+      "instructorId": "84c2f35b-d7ee-4383-8a79-ee4d8cb43ba0",
+      "materials": [
+        "api_examples.zip"
+      ],
+      "openTo": [],
+      "paidToInstructor": false
+    }
+  ],
+  "transactions": [
+    {
+      "id": "5c1d9de8-8b0d-4939-942c-de46a732e737",
+      "type": "purchase",
+      "courseId": "ad4c7006-36ba-4018-b049-3f2d43c9a526",
+      "buyerId": "6937c119-ea59-468a-b4fb-5ba469a3d823",
+      "sellerId": "LMS_ORG",
+      "amount": 200,
+      "status": "completed",
+      "createdAt": "2025-11-22T20:45:14.740Z"
+    },
+    {
+      "id": "dd0a1ccd-9a99-4891-83a6-1595343752ab",
+      "type": "payout_due",
+      "courseId": "ad4c7006-36ba-4018-b049-3f2d43c9a526",
+      "instructorId": "6eb92ecd-acad-456e-84b6-f6610611dae3",
+      "amount": 120,
+      "status": "pending",
+      "createdAt": "2025-11-22T20:45:14.741Z"
+    },
+    {
+      "id": "ea685e50-0bc8-43ef-b7d6-a9b815033907",
+      "type": "certificate",
+      "payload": {
+        "id": "226fc32f-5e9e-487f-b3a4-684f98e049e2",
+        "userId": "6937c119-ea59-468a-b4fb-5ba469a3d823",
+        "courseId": "ad4c7006-36ba-4018-b049-3f2d43c9a526",
+        "awardedAt": "2025-11-22T20:50:27.717Z",
+        "certificateUrl": "https://example.com/cert/6937c119-ea59-468a-b4fb-5ba469a3d823/ad4c7006-36ba-4018-b049-3f2d43c9a526"
+      },
+      "createdAt": "2025-11-22T20:50:27.717Z"
+    },
+    {
+      "id": "b31a46aa-ab5b-4904-8bd6-40a9d6fb8231",
+      "type": "purchase",
+      "courseId": "ad4c7006-36ba-4018-b049-3f2d43c9a526",
+      "buyerId": "6937c119-ea59-468a-b4fb-5ba469a3d823",
+      "sellerId": "LMS_ORG",
+      "amount": 200,
+      "status": "completed",
+      "createdAt": "2025-11-22T20:51:42.061Z"
+    },
+    {
+      "id": "a5f00669-7070-4428-80bc-c65b8c6d7e72",
+      "type": "payout_due",
+      "courseId": "ad4c7006-36ba-4018-b049-3f2d43c9a526",
+      "instructorId": "6eb92ecd-acad-456e-84b6-f6610611dae3",
+      "amount": 120,
+      "status": "pending",
+      "createdAt": "2025-11-22T20:51:42.062Z"
+    },
+    {
+      "id": "136bae83-f4d2-4a53-893b-2b1f7ea992c4",
+      "type": "purchase",
+      "courseId": "29d93085-46b2-40c7-9683-25d6ce8510e1",
+      "buyerId": "0a0e830d-3276-4ee6-beec-072a9cd200f7",
+      "sellerId": "LMS_ORG",
+      "amount": 180,
+      "status": "completed",
+      "createdAt": "2025-11-23T12:44:36.700Z"
+    },
+    {
+      "id": "8e83d17d-3b10-41f7-a3f7-3aba0c930147",
+      "type": "payout_due",
+      "courseId": "29d93085-46b2-40c7-9683-25d6ce8510e1",
+      "instructorId": "6eb92ecd-acad-456e-84b6-f6610611dae3",
+      "amount": 108,
+      "status": "pending",
+      "createdAt": "2025-11-23T12:44:36.701Z"
+    },
+    {
+      "id": "1fe07b9b-f9cb-4759-bf4d-91d79687427c",
+      "type": "certificate",
+      "payload": {
+        "id": "ec251470-cab7-403f-be49-fa5019de915e",
+        "userId": "0a0e830d-3276-4ee6-beec-072a9cd200f7",
+        "courseId": "29d93085-46b2-40c7-9683-25d6ce8510e1",
+        "awardedAt": "2025-11-23T12:58:45.097Z",
+        "certificateUrl": "https://example.com/cert/0a0e830d-3276-4ee6-beec-072a9cd200f7/29d93085-46b2-40c7-9683-25d6ce8510e1"
+      },
+      "createdAt": "2025-11-23T12:58:45.097Z"
+    },
+    {
+      "id": "81aea1ff-1258-4497-be37-62d52fae5ba9",
+      "type": "certificate",
+      "payload": {
+        "id": "48e18b4f-5971-42b1-9832-f9259b3fabcb",
+        "userId": "0a0e830d-3276-4ee6-beec-072a9cd200f7",
+        "courseId": "29d93085-46b2-40c7-9683-25d6ce8510e1",
+        "awardedAt": "2025-11-23T13:08:22.200Z",
+        "certificateUrl": "/certificates/48e18b4f-5971-42b1-9832-f9259b3fabcb.pdf"
+      },
+      "createdAt": "2025-11-23T13:08:22.200Z"
+    },
+    {
+      "id": "58b59245-8000-430b-9fd2-33fd6a4ad65b",
+      "type": "certificate",
+      "payload": {
+        "id": "cf38cf84-da79-43ae-8f2c-c4012182040d",
+        "userId": "0a0e830d-3276-4ee6-beec-072a9cd200f7",
+        "courseId": "29d93085-46b2-40c7-9683-25d6ce8510e1",
+        "awardedAt": "2025-11-23T13:10:25.605Z",
+        "certificateUrl": "/certificates/cf38cf84-da79-43ae-8f2c-c4012182040d.pdf"
+      },
+      "createdAt": "2025-11-23T13:10:25.605Z"
+    },
+    {
+      "id": "d0f0c53a-830d-4631-a800-23d98d242d58",
+      "type": "certificate",
+      "payload": {
+        "id": "6fb8fa36-9d61-4bf9-bd02-f16bfef165e8",
+        "userId": "0a0e830d-3276-4ee6-beec-072a9cd200f7",
+        "courseId": "29d93085-46b2-40c7-9683-25d6ce8510e1",
+        "awardedAt": "2025-11-23T13:12:40.513Z",
+        "certificateUrl": "/certificates/6fb8fa36-9d61-4bf9-bd02-f16bfef165e8.pdf"
+      },
+      "createdAt": "2025-11-23T13:12:40.513Z"
+    },
+    {
+      "id": "801f41b3-078f-497f-b49d-f9dc07ba1b69",
+      "type": "certificate",
+      "payload": {
+        "id": "80ac909c-b702-4063-b3d6-eb5c916bd618",
+        "userId": "0a0e830d-3276-4ee6-beec-072a9cd200f7",
+        "courseId": "29d93085-46b2-40c7-9683-25d6ce8510e1",
+        "awardedAt": "2025-11-23T13:14:52.015Z",
+        "certificateUrl": "/certificates/80ac909c-b702-4063-b3d6-eb5c916bd618.pdf"
+      },
+      "createdAt": "2025-11-23T13:14:52.015Z"
+    },
+    {
+      "id": "26f46346-2853-4bcb-947f-a3112d084118",
+      "type": "certificate",
+      "payload": {
+        "id": "bed566b3-978d-4705-8477-adcc5c38d965",
+        "userId": "0a0e830d-3276-4ee6-beec-072a9cd200f7",
+        "courseId": "29d93085-46b2-40c7-9683-25d6ce8510e1",
+        "awardedAt": "2025-11-23T13:15:55.488Z",
+        "certificateUrl": "/certificates/bed566b3-978d-4705-8477-adcc5c38d965.pdf"
+      },
+      "createdAt": "2025-11-23T13:15:55.488Z"
+    },
+    {
+      "id": "c710f394-8e0e-4c8e-914d-7b3296a4bd53",
+      "type": "certificate",
+      "payload": {
+        "id": "56a9dacb-7310-4404-8a2a-cad573b24587",
+        "userId": "0a0e830d-3276-4ee6-beec-072a9cd200f7",
+        "courseId": "29d93085-46b2-40c7-9683-25d6ce8510e1",
+        "awardedAt": "2025-11-23T13:17:48.394Z",
+        "certificateUrl": "/certificates/undefined.pdf"
+      },
+      "createdAt": "2025-11-23T13:17:48.394Z"
+    },
+    {
+      "id": "234e52e7-b94d-4c8e-827b-589a12e3a38f",
+      "type": "certificate",
+      "payload": {
+        "id": "9f8bce0f-b572-43ee-8afb-850a691e0ec5",
+        "userId": "0a0e830d-3276-4ee6-beec-072a9cd200f7",
+        "courseId": "29d93085-46b2-40c7-9683-25d6ce8510e1",
+        "awardedAt": "2025-11-23T13:19:32.212Z",
+        "certificateUrl": "/certificates/9f8bce0f-b572-43ee-8afb-850a691e0ec5.pdf"
+      },
+      "createdAt": "2025-11-23T13:19:32.212Z"
+    },
+    {
+      "id": "f8970431-10be-4490-8ec9-b3fcb1056c08",
+      "type": "certificate",
+      "payload": {
+        "id": "567c80ad-4ee7-4aa6-9b18-471826ec24c3",
+        "userId": "0a0e830d-3276-4ee6-beec-072a9cd200f7",
+        "courseId": "29d93085-46b2-40c7-9683-25d6ce8510e1",
+        "awardedAt": "2025-11-23T13:21:01.268Z",
+        "certificateUrl": "/certificates/567c80ad-4ee7-4aa6-9b18-471826ec24c3.pdf"
+      },
+      "createdAt": "2025-11-23T13:21:01.268Z"
+    },
+    {
+      "id": "f83ab7f3-1fba-4f58-a01c-620e9ce7c4b3",
+      "type": "certificate",
+      "payload": {
+        "id": "a41e8750-4b8c-4302-9d8e-db79d73732d8",
+        "userId": "0a0e830d-3276-4ee6-beec-072a9cd200f7",
+        "courseId": "29d93085-46b2-40c7-9683-25d6ce8510e1",
+        "awardedAt": "2025-11-23T13:24:55.981Z",
+        "certificateUrl": "/certificates/a41e8750-4b8c-4302-9d8e-db79d73732d8.pdf"
+      },
+      "createdAt": "2025-11-23T13:24:55.981Z"
+    },
+    {
+      "id": "1a6de248-279b-49fb-ae85-219a28d2b79e",
+      "type": "certificate",
+      "payload": {
+        "id": "266cd7f7-a098-48c2-9cf9-07ac7a26942b",
+        "userId": "0a0e830d-3276-4ee6-beec-072a9cd200f7",
+        "courseId": "29d93085-46b2-40c7-9683-25d6ce8510e1",
+        "awardedAt": "2025-11-23T13:26:55.086Z",
+        "certificateUrl": "/certificates/266cd7f7-a098-48c2-9cf9-07ac7a26942b.pdf"
+      },
+      "createdAt": "2025-11-23T13:26:55.086Z"
+    },
+    {
+      "id": "a4033a05-0b6a-4331-bcd0-d4a798a2a938",
+      "type": "certificate",
+      "payload": {
+        "id": "151c0929-14e7-4fde-b26f-f907f2f347c1",
+        "userId": "0a0e830d-3276-4ee6-beec-072a9cd200f7",
+        "courseId": "29d93085-46b2-40c7-9683-25d6ce8510e1",
+        "awardedAt": "2025-11-23T13:29:44.993Z",
+        "certificateUrl": "/certificates/151c0929-14e7-4fde-b26f-f907f2f347c1.pdf"
+      },
+      "createdAt": "2025-11-23T13:29:44.993Z"
+    },
+    {
+      "id": "d3464d1b-f9f4-4131-af62-9dc44e634195",
+      "type": "certificate",
+      "payload": {
+        "id": "f340fffd-3920-4d61-8a1c-59080f68713c",
+        "userId": "0a0e830d-3276-4ee6-beec-072a9cd200f7",
+        "courseId": "29d93085-46b2-40c7-9683-25d6ce8510e1",
+        "awardedAt": "2025-11-23T13:34:21.552Z",
+        "certificateUrl": "/certificates/f340fffd-3920-4d61-8a1c-59080f68713c.pdf"
+      },
+      "createdAt": "2025-11-23T13:34:21.552Z"
+    },
+    {
+      "id": "f5474f9d-c7ee-476f-be6c-6a9576ca5286",
+      "type": "certificate",
+      "payload": {
+        "id": "7b18d8be-1909-4c27-a789-defc2422e01b",
+        "userId": "0a0e830d-3276-4ee6-beec-072a9cd200f7",
+        "courseId": "29d93085-46b2-40c7-9683-25d6ce8510e1",
+        "awardedAt": "2025-11-23T13:36:50.967Z",
+        "certificateUrl": "/certificates/7b18d8be-1909-4c27-a789-defc2422e01b.pdf"
+      },
+      "createdAt": "2025-11-23T13:36:50.967Z"
+    },
+    {
+      "id": "62591419-dc21-4f6c-9e35-8e235bc113db",
+      "type": "certificate",
+      "payload": {
+        "id": "cab68b4b-33b5-4b55-99ba-3e268e95f4f3",
+        "userId": "0a0e830d-3276-4ee6-beec-072a9cd200f7",
+        "courseId": "29d93085-46b2-40c7-9683-25d6ce8510e1",
+        "awardedAt": "2025-11-23T13:38:21.165Z",
+        "certificateUrl": "/certificates/cab68b4b-33b5-4b55-99ba-3e268e95f4f3.pdf"
+      },
+      "createdAt": "2025-11-23T13:38:21.165Z"
+    },
+    {
+      "id": "8ab06433-c4b9-44e9-ac1e-5ed014557e58",
+      "type": "certificate",
+      "payload": {
+        "id": "ad478d9a-b6ac-4839-a1fb-1c3990b8030e",
+        "userId": "0a0e830d-3276-4ee6-beec-072a9cd200f7",
+        "courseId": "29d93085-46b2-40c7-9683-25d6ce8510e1",
+        "awardedAt": "2025-11-23T13:40:24.213Z",
+        "certificateUrl": "/certificates/ad478d9a-b6ac-4839-a1fb-1c3990b8030e.pdf"
+      },
+      "createdAt": "2025-11-23T13:40:24.213Z"
+    },
+    {
+      "id": "aa3a0f38-3abe-44d0-9dc7-15b577d0c64b",
+      "type": "certificate",
+      "payload": {
+        "id": "883bb60d-5aa0-4b9e-a6e1-65de6870ee2b",
+        "userId": "0a0e830d-3276-4ee6-beec-072a9cd200f7",
+        "courseId": "29d93085-46b2-40c7-9683-25d6ce8510e1",
+        "awardedAt": "2025-11-23T13:48:53.199Z",
+        "certificateUrl": "/certificates/883bb60d-5aa0-4b9e-a6e1-65de6870ee2b.pdf"
+      },
+      "createdAt": "2025-11-23T13:48:53.199Z"
+    },
+    {
+      "id": "d12a65e3-b2fe-4525-ba17-715751040863",
+      "type": "certificate",
+      "payload": {
+        "id": "2b913b47-d272-4a4e-89c9-9123af02d001",
+        "userId": "0a0e830d-3276-4ee6-beec-072a9cd200f7",
+        "courseId": "29d93085-46b2-40c7-9683-25d6ce8510e1",
+        "awardedAt": "2025-11-23T13:49:51.467Z",
+        "certificateUrl": "/certificates/2b913b47-d272-4a4e-89c9-9123af02d001.pdf"
+      },
+      "createdAt": "2025-11-23T13:49:51.467Z"
+    },
+    {
+      "id": "71745d4b-715e-4448-badd-3bdb2839f50c",
+      "type": "certificate",
+      "payload": {
+        "id": "5ad25565-7297-4bd0-ade9-6a14009aca82",
+        "userId": "0a0e830d-3276-4ee6-beec-072a9cd200f7",
+        "courseId": "29d93085-46b2-40c7-9683-25d6ce8510e1",
+        "awardedAt": "2025-11-23T13:55:18.822Z",
+        "certificateUrl": "/certificates/5ad25565-7297-4bd0-ade9-6a14009aca82.pdf"
+      },
+      "createdAt": "2025-11-23T13:55:18.822Z"
+    }
+  ],
+  "bankAccounts": {
+    "6eb92ecd-acad-456e-84b6-f6610611dae3": {
+      "accountNumber": null,
+      "secret": null,
+      "balance": 0
+    },
+    "84c2f35b-d7ee-4383-8a79-ee4d8cb43ba0": {
+      "accountNumber": null,
+      "secret": null,
+      "balance": 0
+    },
+    "0702adc4-7969-4d66-87e7-4baed9910021": {
+      "accountNumber": null,
+      "secret": null,
+      "balance": 0
+    },
+    "c029a414-0e5f-45aa-9524-ade03242d091": {
+      "accountNumber": null,
+      "secret": null,
+      "balance": 1000
+    },
+    "8d33fb22-efc4-43bd-8632-47c12e254fd5": {
+      "accountNumber": null,
+      "secret": null,
+      "balance": 0
+    },
+    "6937c119-ea59-468a-b4fb-5ba469a3d823": {
+      "accountNumber": "ACC-001",
+      "secret": "pin123",
+      "balance": 100
+    },
+    "LMS_ORG": {
+      "accountNumber": "LMS-000",
+      "secret": "lms-secret",
+      "balance": 580
+    },
+    "0a0e830d-3276-4ee6-beec-072a9cd200f7": {
+      "accountNumber": "ACC-62",
+      "secret": "pin123",
+      "balance": 320
+    }
+  }
+}
