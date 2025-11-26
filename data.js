@@ -2,6 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
+const { hashPassword } = require("./helpers/utils");
 
 const PERSIST_FILE = path.join(__dirname, 'persist.json');
 
@@ -19,29 +20,30 @@ function seed() {
   if (state.courses.length) return;
 
   // simple users
-  const instructors = [
-    {
-      id: uuidv4(),
-      name: 'Inst ABC',
-      email: 'abc@ins.com',
-      role: 'instructor',
-      passwordHash: null
-    },
-    {
-      id: uuidv4(),
-      name: 'Inst MNO',
-      email: 'mno@ins.com',
-      role: 'instructor',
-      passwordHash: null
-    },
-    {
-      id: uuidv4(),
-      name: 'Inst PQR',
-      email: 'pqr@ins.com',
-      role: 'instructor',
-      passwordHash: null
-    }
-  ];
+const instructors = [
+  {
+    id: uuidv4(),
+    name: "Inst ABC",
+    email: "abc@ins.com",
+    role: "instructor",
+    passwordHash: hashPassword("abc123")
+  },
+  {
+    id: uuidv4(),
+    name: "Inst MNO",
+    email: "mno@ins.com",
+    role: "instructor",
+    passwordHash: hashPassword("mno123")
+  },
+  {
+    id: uuidv4(),
+    name: "Inst PQR",
+    email: "pqr@ins.com",
+    role: "instructor",
+    passwordHash: hashPassword("pqr123")
+  }
+];
+
 
   // lump sum payment rate when LMS pays instructor
   const payoutPerCourse = 100; // arbitrary
